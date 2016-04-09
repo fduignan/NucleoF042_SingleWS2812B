@@ -27,6 +27,6 @@ void writeSPI(uint8_t *Data,unsigned Count)
     {
         SPI1_DR = (uint8_t)(*Data);        
         Data++;        
-        while ( (SPI1_SR & (BIT12+BIT11))==(BIT12+BIT11)); // wait if FIFO full or greater        
+        while ( (SPI1_SR & (BIT12+BIT11))==(BIT12+BIT11)); // wait if FIFO is full
     }    
 }
